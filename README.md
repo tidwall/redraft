@@ -17,7 +17,7 @@ Getting Started
 2. Install RedRaft
 
 ```sh
-$ go install -u github.com/tidwall/redraft
+$ go install github.com/tidwall/redraft
 ```
 
 ### Running
