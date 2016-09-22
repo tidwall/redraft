@@ -20,6 +20,8 @@ Getting Started
 $ go install github.com/tidwall/redraft
 ```
 
+Optionally you can download a prebuilt [zip](https://github.com/tidwall/redraft/releases/download/demo/redraft-demo-darwin-amd64.zip) for Mac OS which includes Redis and RedRaft.
+
 ### Running
 
 First start a single-member cluster:
