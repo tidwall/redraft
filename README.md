@@ -109,12 +109,12 @@ For example, setting the following options:
 $ redraft --consistency high
 ```
 
-Provides the highest level of durability and consistency.
+Provides the highest level of consistency.
 
 Leadership Changes
 ------------------
 
-In a Raft cluster only one the server can apply commands. If a command is attempted on a follower you will be presented with the response:
+In a Raft cluster only the leader can apply commands. If a command is attempted on a follower you will be presented with the response:
 
 ```
 SET x y
