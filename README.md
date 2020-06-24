@@ -10,14 +10,16 @@ RedRaft is an experimental project that allows for [Redis](http://redis.io) to r
 Getting Started
 ---------------
 
-### Installing
+### Building
 
 1. Install [Redis](http://redis.io/download).
 
-2. Install RedRaft
+2. Build RedRaft
 
 ```sh
-$ go install github.com/tidwall/redraft
+$ git clone https://github.com/tidwall/redraft
+$ cd redraft
+$ make
 ```
 
 Optionally you can download a prebuilt [zip](https://github.com/tidwall/redraft/releases/download/demo/redraft-demo-darwin-amd64.zip) for Mac OS which includes Redis and RedRaft.
@@ -26,7 +28,7 @@ Optionally you can download a prebuilt [zip](https://github.com/tidwall/redraft/
 
 First start a single-member cluster:
 ```
-$ redraft
+$ ./redraft
 ```
 
 This will start the server listening on port 7481 for client and server-to-server communication.
@@ -42,8 +44,8 @@ $ redis-cli -p 7481 GET mykey
 
 Adding members:
 ```
-$ redraft -p 7482 -dir data2 -join 7481
-$ redraft -p 7483 -dir data3 -join 7481
+$ ./redraft -p 7482 -dir data2 -join 7481
+$ ./redraft -p 7483 -dir data3 -join 7481
 ```
 
 That's it. Now if node1 goes down, node2 and node3 will continue to operate.
@@ -106,7 +108,7 @@ The `--consistency` param has the following options:
 For example, setting the following options:
 
 ```
-$ redraft --consistency high
+$ ./redraft --consistency high
 ```
 
 Provides the highest level of consistency.
